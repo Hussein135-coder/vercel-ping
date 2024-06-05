@@ -4,8 +4,7 @@ const schedule = require("node-schedule");
 
 const app = express();
 const PORT = 3000;
-//const URL = "https://5000-01hzkq91ad81aw7qbwnsgv5z49.cloudspaces.litng.ai";
-const URL = "https://google.com";
+const URL = "https://5000-01hzkq91ad81aw7qbwnsgv5z49.cloudspaces.litng.ai";
 
 app.get("/", (req, res) => {
   res.send("Express server is running.");
