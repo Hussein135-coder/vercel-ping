@@ -5,6 +5,7 @@ const schedule = require("node-schedule");
 const app = express();
 const PORT = 3000;
 const URL = "https://5000-01hzkq91ad81aw7qbwnsgv5z49.cloudspaces.litng.ai";
+const URL2 = "https://2000-01j24d27h0nxf71kx65wdhjp7y.cloudspaces.litng.ai";
 
 app.get("/", (req, res) => {
   res.send("Express server is running.");
@@ -14,6 +15,8 @@ const requestUrl = async () => {
   try {
     const response = await axios.get(URL);
     console.log("Response:", response.data);
+    const response2 = await axios.get(URL2);
+    console.log("Response2:", response2.data);
   } catch (error) {
     console.error("Error:", error);
   }
