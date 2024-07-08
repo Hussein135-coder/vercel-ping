@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const schedule = require("node-schedule");
+//const schedule = require("node-schedule");
 
 const app = express();
 const PORT = 3000;
@@ -23,7 +23,10 @@ const requestUrl = async () => {
 };
 
 // Schedule the request every 2 minutes
-schedule.scheduleJob("*/2 * * * *", requestUrl);
+setInterval(() => {
+  requestUrl();
+}, 20000);
+//schedule.scheduleJob("*/2 * * * *", requestUrl);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
