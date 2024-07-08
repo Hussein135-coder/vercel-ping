@@ -16,19 +16,28 @@ const requestUrl = async () => {
     const response = await fetch(URL);
     const result = await response.json();
     console.log("Response:", result);
-    //const response2 = await fetch(URL2);
-    //const result2 = await response2.json();
-   // console.log("Response2:", result2);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+
+const requestUrl2 = async () => {
+  try {
+    const response = await fetch(URL);
+    const result = await response.json();
+    console.log("Response:", result);
   } catch (error) {
     console.error("Error:", error);
   }
 };
 
 requestUrl()
+requestUrl2()
 // Schedule the request every 2 minutes
 setInterval(() => {
   console.log("2 Min:");
   requestUrl();
+  requestUrl2()
 }, 20000);
 //schedule.scheduleJob("*/2 * * * *", requestUrl);
 
