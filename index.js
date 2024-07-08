@@ -13,15 +13,18 @@ app.get("/", (req, res) => {
 
 const requestUrl = async () => {
   try {
-    const response = await axios.get(URL);
-    console.log("Response:", response.data);
-    const response2 = await axios.get(URL2);
-    console.log("Response2:", response2.data);
+    const response = await fetch(URL);
+    const result = await response.json();
+    console.log("Response:", result);
+    const response2 = await fetch(URL2);
+    const result2 = await response2.json();
+    console.log("Response2:", result2);
   } catch (error) {
     console.error("Error:", error);
   }
 };
 
+requestUrl()
 // Schedule the request every 2 minutes
 setInterval(() => {
   requestUrl();
