@@ -24,7 +24,7 @@ const requestUrl = async () => {
 
 const requestUrl2 = async () => {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(URL2);
     const result = await response.json();
     console.log("Response:", result);
   } catch (error) {
