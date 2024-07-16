@@ -4,7 +4,8 @@ const axios = require("axios");
 
 const app = express();
 const PORT = 3000;
-const URL = "https://3000-01hzkq91ad81aw7qbwnsgv5z49.cloudspaces.litng.ai";
+//const URL = "https://3000-01hzkq91ad81aw7qbwnsgv5z49.cloudspaces.litng.ai";
+const URL = "https://3000-01j2xwnz7cs7ha5c61w2ag9d37.cloudspaces.litng.ai"
 const URL2 = "https://3000-01j24d27h0nxf71kx65wdhjp7y.cloudspaces.litng.ai";
 
 app.get("/", (req, res) => {
@@ -17,7 +18,7 @@ const requestUrl = async () => {
     const result = await response.json();
     console.log("Response:", result);
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error: 1111");
   }
 };
 
@@ -27,7 +28,7 @@ const requestUrl2 = async () => {
     const result = await response.json();
     console.log("Response:", result);
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error: 2222");
   }
 };
 
