@@ -39,7 +39,7 @@ setInterval(() => {
   console.log("2 Min:");
   requestUrl();
   requestUrl2()
-}, 20000);
+}, 120000);
 //schedule.scheduleJob("*/2 * * * *", requestUrl);
 
 app.listen(PORT, () => {
